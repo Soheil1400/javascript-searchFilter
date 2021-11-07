@@ -72,7 +72,7 @@ divCard.innerHTML = creatMovie(collectionMovie)
 function onSearch(element){
     const search = element.value.toUpperCase();
     const filterSearch = collectionMovie.filter(card=>{
-        return card.name.toUpperCase().includes(search)
+        return card.name.toUpperCase().includes(search) || card.time.toUpperCase().includes(search) || card.calender.toUpperCase().includes(search)
     })
     divCard.innerHTML = creatMovie(filterSearch)
 }
